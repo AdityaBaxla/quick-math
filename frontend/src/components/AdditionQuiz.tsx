@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const AdditionQuiz = () => {
   const [num1, setNum1] = useState(0);

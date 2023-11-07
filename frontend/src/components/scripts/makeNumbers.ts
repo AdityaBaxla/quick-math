@@ -1,14 +1,14 @@
-interface genNumber {
-    level : number,
+// interface genNumber {
+//     level : number,
 
-    addition : boolean,
-    mulitplication : boolean,
-    substraction : boolean,
-    division : boolean,
+//     addition : boolean,
+//     mulitplication : boolean,
+//     substraction : boolean,
+//     division : boolean,
 
-    time? : number,
-    amount? : number,
-}
+//     time? : number,
+//     amount? : number,
+// }
 
 const randomRange = (a:number, b:number) => Math.ceil(Math.random() * (b - a) + 1)
 

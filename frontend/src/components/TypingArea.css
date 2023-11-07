@@ -1,0 +1,15 @@
+/* Define the blinking animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Apply the animation to an element (e.g., a cursor) */
+#blinking-cursor {
+  display: inline-block;
+  width: 2px; /* Adjust the width to your preference */
+  height: 1em; /* Adjust the height to your preference */
+  background-color: #000; /* Color of the cursor */
+  animation: blink 1s step-end infinite; /* 1s duration, step-end for sharp transition */
+}
