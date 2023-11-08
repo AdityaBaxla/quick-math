@@ -9,6 +9,7 @@ MathQuest is a productivity-driven addictive math game that challenges your ment
 ## Table of Contents
 
 - [Vision](#vision)
+- [Todo List](#todo-list)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Contribution Guidelines](#contribution-guidelines)
@@ -24,6 +25,14 @@ MathQuest aims to transform the way we perceive mathematics by making it engagin
 - Encourage users to master multiplication tables, squares, cubes, square roots, and more.
 - Provide personalized challenges tailored to each user's progress.
 - Create a dynamic learning environment where the difficulty level increases as the user improves.
+
+## Todo List
+
+- [ ] make functioning frontend capable of accepting user input
+- [ ] number generating function to feed the numbers (numbers should not be repeted one after another)
+- [ ] pressing a number and enter should check the number if its correct and show the color respectively
+- [ ] collect the number data and save it in a sql database
+- [ ] make toggles for addn, sub, mult, div
 
 ## Features
 
