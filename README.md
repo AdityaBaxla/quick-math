@@ -7,6 +7,7 @@ MathQuest is a productivity-driven addictive math game that challenges your ment
 ![Sample Gameplay](https://yourwebsite.com/gameplay.png)
 
 ## Table of Contents
+
 - [Vision](#vision)
 - [Features](#features)
 - [Getting Started](#getting-started)
@@ -39,7 +40,7 @@ MathQuest aims to transform the way we perceive mathematics by making it engagin
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YourOrganization/MathQuest.git
+   git clone https://github.com/AdityaBaxla/quick-math
    ```
 
 2. Install dependencies:
@@ -71,7 +72,7 @@ We welcome contributions from the open-source community to help make MathQuest e
 3. Make your changes and commit them:
 
    ```bash
-   git commit -m "Add your meaningful commit message here"
+   git commit -m "commit message here"
    ```
 
 4. Push your changes to your fork:
@@ -106,10 +107,5 @@ We have exciting plans for MathQuest's future:
 Stay tuned for more exciting updates!
 
 **Let's make learning math fun and addictive together!**
-
-<div style="background-color: #FFD700; padding: 20px; text-align: center;">
-  <p style="font-size: 24px; color: #333;">Join the MathQuest Community</p>
-  <a href="https://yourwebsite.com" style="background-color: #333; color: #FFF; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Play Now</a>
-</div>
 
 Feel free to reach out to us at [adityabaxla@gmail.com](mailto:adityabaxla@gmail.com) for any questions or suggestions. Let's build the ultimate math challenge app together!
