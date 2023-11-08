@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { generateNums } from "./scripts/makeNumbers";
 import NumberTyping from "./NumberTyping";
 
 const TypingArea = () => {
   const [typeNumber, setTypedNumbers] = useState<string>("");
 
   useEffect(() => {
+    // handeling keyboard numbers entered when enter pressed, compare wtih the correct option
     const handleKeyDown = (e: KeyboardEvent) => {
       if (/[0-9]/.test(e.key)) {
         setTypedNumbers((prev) => prev + e.key);
+      } else if (e.key == "Backspace") {
+        setTypedNumbers((prev) => prev.slice(0, -1));
+      } else if (e.key == "Enter") {
+        // do nothing
       }
-      //if ()
     };
 
     window.addEventListener("keydown", handleKeyDown);
