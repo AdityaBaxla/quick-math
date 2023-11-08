@@ -3,18 +3,16 @@
 import AdditionQuiz from "./components/AdditionQuiz";
 import NumberTyping from "./components/NumberTyping";
 import TypingArea from "./components/TypingArea";
-import "./App.css";
+import { Box } from "@chakra-ui/react";
 
 function App() {
   //const [count, setCount] = useState(0);
   //const numArr = generateNums(10);
   return (
     <>
-      <div>
-        <h1>
-          <TypingArea />
-        </h1>
-      </div>
+      <Box bg={"blackAlpha.900"} minHeight={"100vh"}>
+        <TypingArea />
+      </Box>
     </>
   );
 }

@@ -1,10 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { generateNums } from "./scripts/makeNumbers";
-import NumberTyping from "./NumberTyping";
+import { Heading, Container, Text, Box } from "@chakra-ui/react";
 
 const TypingArea = () => {
-  const [typeNumber, setTypedNumbers] = useState<string>("");
+  // chakra styling
+  const typingTextProp = {
+    p: "10px",
+    color: "blue.400",
+    fontWeight: "bold",
+    m: "10px",
+    textAlign: "center",
+    ":hover": {
+      fontSize: "3xl",
+    },
+  };
 
+  const [typedNumbers, setTypedNumbers] = useState<string>("");
+
+  //getting data quiz data from genNums
+  const quizArr = generateNums(10);
+  const a = 1,
+    b = 1;
+  a + b;
   useEffect(() => {
     // handeling keyboard numbers entered when enter pressed, compare wtih the correct option
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -13,7 +30,7 @@ const TypingArea = () => {
       } else if (e.key == "Backspace") {
         setTypedNumbers((prev) => prev.slice(0, -1));
       } else if (e.key == "Enter") {
-        // do nothing
+        // check typedNumbers against ans and change setTyped num To ''
       }
     };
 
@@ -24,14 +41,15 @@ const TypingArea = () => {
   }, []);
   return (
     <div>
-      <div>
-        <h1>Quick Math</h1>
-      </div>
-      <div>
-        <p>
-          {typeNumber} <span id="blinking-cursor">_</span>
-        </p>
-      </div>
+      <Container p="50px" color={"rgb(0, 66, 56)"} fontWeight={"bold"}>
+        <Box paddingTop={"10em"}>
+          <Heading size={"4xl"}>Quick Math</Heading>
+        </Box>
+
+        <Text sx={typingTextProp} fontSize={"6xl"}>
+          {typedNumbers} _
+        </Text>
+      </Container>
     </div>
   );
 };
