@@ -1,10 +1,10 @@
 # MathQuest - Your Ultimate Math Challenge App
 
-![MathQuest Logo](https://yourwebsite.com/logo.png)
+<will add logo here>
 
 MathQuest is a productivity-driven addictive math game that challenges your mental math skills. It's not just about solving math problems but enhancing your overall mathematical proficiency. With personalized, progressively challenging quizzes, you'll find yourself addicted to learning math in no time.
 
-![Sample Gameplay](https://yourwebsite.com/gameplay.png)
+<will add sample page here>
 
 ## Table of Contents
 
