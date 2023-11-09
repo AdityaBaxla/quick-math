@@ -12,15 +12,30 @@
 
 const randomRange = (a:number, b:number) => Math.ceil(Math.random() * (b - a) + 1)
 
+// not generate the same numbers consequtively
+// makeNumbers.ts
 
+const usedNumbers: Set<number> = new Set();
+const maxPossibleNumbers = 10;
+// Generate a random integer within a specified range, ensuring it's not in the usedNumbers set
+function getRandomNonConsecutiveInt(min: number, max: number): number {
+  let num;
+  do {
+    num = Math.floor(Math.random() * (max - min + 1)) + min;
+  } while (usedNumbers.has(num));
 
-export const generateNums = (amount: number) => {
-    const output = []
+  usedNumbers.add(num);
+  return num;
+}
 
-    for (let i = 0 ; i < amount; i++ ){
-        const x : number  = randomRange(1,10)
-        const y : number = randomRange(1,10)
-        output.push( [ x, y, x + y ] )
-    }
-    return output;
+// Example usage for addition questions
+export function makeNumbers(): [number, number] {
+  if (usedNumbers.size === maxPossibleNumbers) {
+    // Reset used numbers if needed to ensure variety (maxPossibleNumbers is the upper limit)
+    usedNumbers.clear();
+  }
+
+  const num1 = getRandomNonConsecutiveInt(1, 10); // Example: Generate numbers between 1 and 10
+  const num2 = getRandomNonConsecutiveInt(1, 10);
+  return [num1, num2];
 }
