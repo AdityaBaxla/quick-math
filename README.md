@@ -28,8 +28,11 @@ MathQuest aims to transform the way we perceive mathematics by making it engagin
 
 ## Todo List
 
-- [ ] make functioning frontend capable of accepting user input
+- [x] make functioning frontend capable of accepting user input
+  - [x] make to display simple stuff
+  - [ ] make to display end screen as well
 - [ ] number generating function to feed the numbers (numbers should not be repeted one after another)
+  - [x] make a simple function to generate addtion questions
 - [ ] pressing a number and enter should check the number if its correct and show the color respectively
 - [ ] collect the number data and save it in a sql database
 - [ ] make toggles for addn, sub, mult, div

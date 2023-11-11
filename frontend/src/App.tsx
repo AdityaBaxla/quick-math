@@ -3,6 +3,7 @@
 import AdditionQuiz from "./components/AdditionQuiz";
 import NumberTyping from "./components/NumberTyping";
 import TypingArea from "./components/TypingArea";
+import SelectionBar from "./components/SelectionBar";
 import { Box } from "@chakra-ui/react";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <Box bg={"blackAlpha.900"} minHeight={"100vh"}>
+        <SelectionBar/>
         <TypingArea />
       </Box>
     </>

@@ -22,13 +22,15 @@ const TypingArea = () => {
   //getting data quiz data from genNums
   //const quizArr = generateNums(10);
   const numberOfQuestions = 10;
+  const triggerSetQuestionUseEffect = () => {}
+  useEffect( () => {
+    console.log('set Quesiton Tiggered ')
+  }, [])
+
+  
 
   useEffect(() => {
-    setQuestion(makeNumbers());
-  }),
-    [results];
-
-  useEffect(() => {
+    console.log('key handle useEffect triggerd')
     const handleKeyDown = (e: KeyboardEvent) => {
       if (/[0-9]/.test(e.key)) {
         setTypedNumbers((prev) => prev + e.key);
@@ -40,7 +42,11 @@ const TypingArea = () => {
         if (parseInt(typedNumbers, 10) === answer) {
           // Correct answer handling
           setResults((prev) => prev + 1); // Increase the results count
+
+          
         }
+        //set new question after enter pressed
+        setQuestion(makeNumbers())
         setTypedNumbers(""); // Clear the typed numbers
       }
     };
@@ -60,11 +66,10 @@ const TypingArea = () => {
         </Box>
         {
           <Text sx={typingTextProp} fontSize={"6xl"}>
-            {question[0]} + {question[1]} ={typedNumbers} _
+            {question[0]} + {question[1]} = {typedNumbers}_
           </Text>
         }
       </Container>
-      f
     </div>
   );
 };
