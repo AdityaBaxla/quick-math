@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { makeNumbers } from "./scripts/makeNumbers";
 import { Heading, Container, Text, Box } from "@chakra-ui/react";
+import {useNavigate} from 'react-router-dom';
+import StatsScreen from  './StatsScreen';
 
 const TypingArea = () => {
+  // const navigate = useNavigate();
   // chakra styling
   const typingTextProp = {
     fontFamily: "monospace",
@@ -18,14 +21,15 @@ const TypingArea = () => {
 
   const [typedNumbers, setTypedNumbers] = useState<string>("");
   const [question, setQuestion] = useState<[number, number]>([0, 0]);
-  const [results, setResults] = useState<number>(0);
+  const [results, setResults] = useState<[number, number]>([0,0]); //[0]: got right, [1]: total
+  const [enterCount, setEnterCount] = useState(0);
   //getting data quiz data from genNums
   //const quizArr = generateNums(10);
   const numberOfQuestions = 10;
-  const triggerSetQuestionUseEffect = () => {}
-  useEffect( () => {
-    console.log('set Quesiton Tiggered ')
-  }, [])
+  // const triggerSetQuestionUseEffect = () => {}
+  // useEffect( () => {
+  //   console.log('set Quesiton Tiggered ')
+  // }, [])
 
   
 
@@ -41,11 +45,13 @@ const TypingArea = () => {
         const answer = question[0] + question[1];
         if (parseInt(typedNumbers, 10) === answer) {
           // Correct answer handling
-          setResults((prev) => prev + 1); // Increase the results count
+          setResults((prev) => [prev[0]+1, prev[1] +1]); // Increase the results count
 
           
         }
         //set new question after enter pressed
+        setResults((prev) => [prev[0], prev[1] +1])
+    
         setQuestion(makeNumbers())
         setTypedNumbers(""); // Clear the typed numbers
       }
@@ -59,19 +65,22 @@ const TypingArea = () => {
   }, [typedNumbers, question, setResults]);
 
   return (
-    <div>
+    <div>{results[1] < 10?
       <Container p="50px" color={"rgb(0, 66, 56)"} fontWeight={"bold"}>
         <Box paddingTop={"10em"}>
           <Heading size={"4xl"}>Quick Math</Heading>
         </Box>
         {
           <Text sx={typingTextProp} fontSize={"6xl"}>
-            {question[0]} + {question[1]} = {typedNumbers}_
+            {question[0]} + {question[1]} = {typedNumbers}_ | {results }
           </Text>
         }
       </Container>
-    </div>
+      : <Container><Text sx={typingTextProp} fontSize={"6xl"}>  {(results[0] / results[1])*100} %</Text></Container>
+      }</div>
   );
 };
+
+
 
 export default TypingArea;
