@@ -77,7 +77,7 @@ const TypingArea = () => {
         }
       </Container>
       : <Container><Text sx={typingTextProp} fontSize={"6xl"}>  {(results[0] / results[1])*100} %</Text></Container>
-      }</div>
+}</div>
   );
 };
 
