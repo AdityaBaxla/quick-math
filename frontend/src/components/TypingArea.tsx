@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { makeNumbers } from "./scripts/makeNumbers";
-import { Heading, Container, Text, Box } from "@chakra-ui/react";
+import { Heading, Container, Text, Box, Button } from "@chakra-ui/react";
 import {useNavigate} from 'react-router-dom';
 import StatsScreen from  './StatsScreen';
 
@@ -65,7 +65,7 @@ const TypingArea = () => {
   }, [typedNumbers, question, setResults]);
 
   return (
-    <div>{results[1] < 10?
+    <div>{results[1] < 3?
       <Container p="50px" color={"rgb(0, 66, 56)"} fontWeight={"bold"}>
         <Box paddingTop={"10em"}>
           <Heading size={"4xl"}>Quick Math</Heading>
@@ -76,7 +76,11 @@ const TypingArea = () => {
           </Text>
         }
       </Container>
-      : <Container><Text sx={typingTextProp} fontSize={"6xl"}>  {(results[0] / results[1])*100} %</Text></Container>
+      // reset the questions &have a button
+      : <Container><Box>
+        <Text sx={typingTextProp} fontSize={"6xl"}>  {(results[0] / results[1])*100} %</Text>
+      </Box><Box>
+        <Button size={'4xl'} onClick={() => setResults([0,0])}> reset </Button></Box></Container>
 }</div>
   );
 };
