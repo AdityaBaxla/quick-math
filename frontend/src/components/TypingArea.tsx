@@ -64,8 +64,10 @@ const TypingArea = () => {
     };
   }, [typedNumbers, question, setResults]);
 
+  const totalQuestion = 3
+
   return (
-    <div>{results[1] < 3?
+    <div>{results[1] < totalQuestion?
       <Container p="50px" color={"rgb(0, 66, 56)"} fontWeight={"bold"}>
         <Box paddingTop={"10em"}>
           <Heading size={"4xl"}>Quick Math</Heading>
@@ -78,9 +80,9 @@ const TypingArea = () => {
       </Container>
       // reset the questions &have a button
       : <Container><Box>
-        <Text sx={typingTextProp} fontSize={"6xl"}>  {(results[0] / results[1])*100} %</Text>
+        <Text sx={typingTextProp} fontSize={"6xl"}>  {(results[0] / totalQuestion)*100} %</Text>
       </Box><Box>
-        <Button size={'4xl'} onClick={() => setResults([0,0])}> reset </Button></Box></Container>
+        <Button size={'4xl'} onClick={() => setResults([0,0])}> <Text size={'xl'}>reset</Text> </Button></Box></Container>
 }</div>
   );
 };
