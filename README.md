@@ -2,7 +2,7 @@
 
 <will add logo here>
 
-MathQuest is a productivity-driven addictive math game that challenges your mental math skills. It's not just about solving math problems but enhancing your overall mathematical proficiency. With personalized, progressively challenging quizzes, you'll find yourself addicted to learning math in no time.
+MathQuest is a productivity-driven addictive math game that challenges your mental math skills. It's not just about solving math problems but enhancing your overall mathematical proficiency. With personalized, progressively challenging quizzes, you'll find yourself addicted to learning math in no time. Get better having fun.
 
 <will add sample page here>
 
